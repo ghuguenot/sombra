@@ -1,0 +1,50 @@
+---
+- name: Config Web VM with Docker
+  hosts: elk
+  remote_user: azureuser
+  become: true
+  tasks:
+    - name: set vm.max_map_count to 262144 in sysctl
+      command: sysctl -w vm.max_map_count=262144
+
+    - name: use more memory
+      sysctl:
+        name: vm.max_map_count
+        value: 262144
+        state: present
+        reload: True
+
+    - name: docker.io
+      apt:
+        update_cache: yes
+        force_apt_get: yes
+        name: docker.io
+        state: present
+
+    - name: Install pip3
+      apt:
+        force_apt_get: yes
+        name: python3-pip
+        state: present
+
+    - name: Install Docker python module
+      pip:
+        name: docker
+        state: present
+
+    - name: download and launch a docker web container
+      docker_container:
+        name: elk
+        image: sebp/elk:761
+        state: started
+        restart_policy: always
+       # List of ports ELK runs on
+        published_ports:
+        - "5601:5601"
+        - "9200:9200"
+        - "5044:5044"
+
+    - name: Enable docker service
+      systemd:
+        name: docker
+        enabled: yes
