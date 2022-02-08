@@ -9,10 +9,10 @@ These files have been tested and used to generate a live ELK deployment on Azure
 They can be used to either recreate the entire deployment pictured above.
 Alternatively, select portions of the playbook files may be used to install only certain pieces of it, such as Filebeat.
 
-## - ansible playbook [ansible] (https://github.com/ghuguenot/sombra/blob/main/Ansible/docker.yml)
-## - elk playbook [elk stack] (https://github.com/ghuguenot/sombra/blob/main/Ansible/install-elk.yml)
-## - filebeat playbook [filebeat] (https://github.com/ghuguenot/sombra/blob/main/Ansible/filebeat-playbook.yml)
-## - metricbeat playbook [metricbeat] (https://github.com/ghuguenot/sombra/blob/main/Ansible/metric-playbook.yml)
+### - ansible playbook [ansible](https://github.com/ghuguenot/sombra/blob/main/Ansible/docker.yml)
+### - elk playbook [elk stack](https://github.com/ghuguenot/sombra/blob/main/Ansible/install-elk.yml)
+### - filebeat playbook [filebeat](https://github.com/ghuguenot/sombra/blob/main/Ansible/filebeat-playbook.yml)
+### - metricbeat playbook [metricbeat](https://github.com/ghuguenot/sombra/blob/main/Ansible/metric-playbook.yml)
 
 This document contains the following details:
 - Description of the Topologu
