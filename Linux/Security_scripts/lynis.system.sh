@@ -1,0 +1,3 @@
+#! /bin/bash
+
+lynis audit
