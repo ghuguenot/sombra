@@ -14,7 +14,7 @@ Alternatively, select portions of the playbook files may be used to install only
 ### - metricbeat playbook [metricbeat](https://github.com/ghuguenot/sombra/blob/main/Ansible/metric-playbook.yml)
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -61,21 +61,22 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because you then deploy this to any number of virtual machines in your network.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Installs docker, python3 and the docker python module
+- Downloads and launches an elk docker container
+- Increases allowable memory of the VM
+- Ensures Docker and this sysctl setting is always up after restart
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+![This is an image](Images/docker_ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- Web-1 10.0.0.4
+- Web-2 10.0.0.5
 
 We have installed the following Beats on these machines:
 - _TODO: Specify which Beats you successfully installed_
