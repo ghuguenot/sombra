@@ -94,6 +94,6 @@ SSH into the control node and follow the steps below:
 > curl https://github.com/ghuguenot/sombra/blob/main/Ansible/install-elk.yml > /etc/ansible/elk_stack_playbook.yml
 - You will need to copy over the Beats playbooks as well if needed
 - Update the hosts file to include the ip addresses (or range) of the target machines.  Make sure you include a header.
+> nano hosts
 - Run the playbook, and navigate to the machine to check that the installation worked.  To do that, navigate to your elk stack server's ip address from your workstation using http://IP_address:5601/
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+>ansible-playbook elk_stack_playbook.yml
