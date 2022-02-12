@@ -40,7 +40,7 @@ The configuration details of each machine may be found below.
 | Jump Box  | Gateway      | 40.83.167.23  | Linux            |
 | Web-1     | DVWA/VM      | 10.0.0.4      | Linux            |
 | Web-2     | DVWA/VM      | 10.0.0.5      | Linux            |
-| Elk-Stack | Monitor/Siem | 20.119.51.160 | Linus            |
+| Elk-Stack | Monitor/Siem | 20.119.51.160 | Linux            |
 
 ### Access Policies
 
